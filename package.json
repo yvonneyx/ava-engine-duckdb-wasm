@@ -14,7 +14,7 @@
       "require": "./lib/index.js"
     }
   },
-  "sideEffects": ["./esm/index.js", "./lib/index.js"],
+  "sideEffects": false,
   "files": ["lib", "esm"],
   "scripts": {
     "build": "tsc --module node16 --moduleResolution node16 --outDir lib --declarationDir lib && tsc --module es2020 --moduleResolution bundler --outDir esm --declarationDir esm",

@@ -4,8 +4,10 @@ DuckDB-Wasm browser engine for AVA. Requires an AVA build that exports `@antv/av
 
 ```ts
 import { AVA } from '@antv/ava/browser';
-import 'ava-duckdb-wasm';
+import { registerEngine } from '@antv/ava/engine';
+import { DuckDBWasmEngine } from 'ava-duckdb-wasm';
 
+registerEngine('duckdb-wasm', DuckDBWasmEngine);
 const ava = new AVA({ llm: { model: 'your-model' }, engine: { type: 'duckdb-wasm' } });
 try {
   await ava.source({ type: 'csv', options: { csv: 'region,sales\nEast,3\nWest,7\n' } });

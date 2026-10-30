@@ -1,8 +1,8 @@
 <div align="center">
-  <h1>AVA DuckDB-Wasm</h1>
+  <h1>AVA Engine DuckDB-Wasm</h1>
   <p><strong>Bring SQL-powered visual analytics to the browser.</strong></p>
   <p>A browser-based DuckDB engine for <a href="https://github.com/antvis/AVA">AVA</a>.</p>
-  <p><a href="https://www.npmjs.com/package/ava-duckdb-wasm">npm</a> · <a href="https://ava-notebook.vercel.app/">Try AVA Notebook</a> · <a href="https://ava.antv.vision/documentation/">Documentation</a></p>
+  <p><a href="https://www.npmjs.com/package/ava-engine-duckdb-wasm">npm</a> · <a href="https://ava-notebook.vercel.app/">Try AVA Notebook</a> · <a href="https://ava.antv.vision/documentation/">Documentation</a></p>
 </div>
 
 Load a CSV, query it with SQL, and explore it with AVA — all in your browser, with no analysis server required.
@@ -16,14 +16,14 @@ Load a CSV, query it with SQL, and explore it with AVA — all in your browser, 
 Install AVA and the engine:
 
 ```sh
-npm install @antv/ava@beta ava-duckdb-wasm
+npm install @antv/ava@beta ava-engine-duckdb-wasm
 ```
 
 Register the engine once, then use AVA as usual:
 
 ```ts
 import { AVA, registerEngine } from '@antv/ava/browser';
-import { DuckDBWasmEngine } from 'ava-duckdb-wasm';
+import { DuckDBWasmEngine } from 'ava-engine-duckdb-wasm';
 
 registerEngine('duckdb-wasm', DuckDBWasmEngine);
 

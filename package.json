@@ -1,9 +1,9 @@
 {
-  "name": "ava-duckdb-wasm",
-  "version": "0.1.0",
+  "name": "ava-engine-duckdb-wasm",
+  "version": "0.1.1",
   "description": "DuckDB-Wasm browser engine for AVA",
   "license": "MIT",
-  "repository": "github:yvonneyx/ava-duckdb-wasm",
+  "repository": "github:yvonneyx/ava-engine-duckdb-wasm",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",

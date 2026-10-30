@@ -1,6 +1,6 @@
 {
   "name": "ava-duckdb-wasm",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0",
   "description": "DuckDB-Wasm browser engine for AVA",
   "license": "MIT",
   "repository": "github:yvonneyx/ava-duckdb-wasm",

@@ -15,13 +15,13 @@ Load a CSV, explore it with SQL, and use AVA to turn questions into analysis and
 
 ## Get started
 
-Install the latest AVA beta:
+Install AVA and the DuckDB-Wasm engine:
 
 ```sh
-npm install @antv/ava@beta
+npm install @antv/ava@beta ava-duckdb-wasm
 ```
 
-This engine package is not yet published to npm. Once it is available, install it alongside AVA, then register the engine once:
+Register the engine once, then use AVA as usual:
 
 ```ts
 import { AVA, registerEngine } from '@antv/ava/browser';

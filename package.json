@@ -1,0 +1,27 @@
+{
+  "name": "ava-duckdb-wasm",
+  "version": "0.1.0",
+  "description": "DuckDB-Wasm browser engine for AVA",
+  "license": "MIT",
+  "repository": "github:yvonneyx/ava-duckdb-wasm",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./esm/index.d.ts",
+      "import": "./esm/index.js",
+      "require": "./lib/index.js"
+    }
+  },
+  "sideEffects": ["./esm/index.js", "./lib/index.js"],
+  "files": ["lib", "esm"],
+  "scripts": {
+    "build": "tsc --module node16 --moduleResolution node16 --outDir lib --declarationDir lib && tsc --module es2020 --moduleResolution bundler --outDir esm --declarationDir esm",
+    "prepare": "npm run build",
+    "test": "vitest run"
+  },
+  "peerDependencies": { "@antv/ava": ">=4.0.0-beta.3 <5" },
+  "dependencies": { "@duckdb/duckdb-wasm": "1.33.1-dev57.0" },
+  "devDependencies": { "typescript": "^5.9.3", "vitest": "^4.1.11" }
+}

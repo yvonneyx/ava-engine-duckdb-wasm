@@ -1,10 +1,13 @@
 /* eslint-env browser */
-import {
-  DuckDBQueryDialect, getDuckDBSchema, profileTables, DEFAULT_METRICS,
-  parseProfileOptions, sqlIdentifier, sqlStringLiteral, serializeOptions,
-  coerceNumbers, createResultCollector, limitedQuery, maxRows, runWithTimeout,
-} from '@antv/ava/engine';
-import type { DuckDBConnection } from '@antv/ava/engine';
+import { DuckDBQueryDialect } from './query/duckdb.js';
+import { getDuckDBSchema } from './duckdb/util/schema.js';
+import { profileTables, DEFAULT_METRICS } from './duckdb/profile.js';
+import { parseProfileOptions } from './util/profile.js';
+import { sqlIdentifier, sqlStringLiteral, serializeOptions } from './util/sql.js';
+import { coerceNumbers } from './util/coerce.js';
+import { createResultCollector, limitedQuery, maxRows } from './util/result.js';
+import { runWithTimeout } from './util/timeout.js';
+import type { DuckDBConnection } from './types.js';
 import type { AsyncDuckDB, AsyncDuckDBConnection, DuckDBBundles } from '@duckdb/duckdb-wasm';
 import type {
   AnalysisEngine, DataModel, DataSourceConfig, ExecutionOptions,

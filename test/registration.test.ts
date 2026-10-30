@@ -1,6 +1,5 @@
 import { expect, it } from 'vitest';
-import { AVA } from '@antv/ava/browser';
-import { registerEngine } from '@antv/ava/engine';
+import { AVA, registerEngine } from '@antv/ava/browser';
 import { DuckDBWasmEngine } from '../src/index';
 
 it('requires explicit registration with the browser AVA instance', async () => {

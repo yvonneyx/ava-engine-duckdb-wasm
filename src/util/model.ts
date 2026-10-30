@@ -1,0 +1,14 @@
+import { createGateway } from 'ai';
+import { createOpenAI } from '@ai-sdk/openai';
+
+import type { LanguageModel } from 'ai';
+import type { LLMConfig } from '../types.js';
+
+/** Keep OpenAI-compatible endpoints on Chat Completions after the SDK upgrade. */
+export function languageModel(llm: LLMConfig): Exclude<LanguageModel, string> {
+  if (typeof llm.model !== 'string') return llm.model;
+  if (llm.provider === 'gateway') {
+    return createGateway({ apiKey: llm.apiKey, baseURL: llm.baseURL })(llm.model);
+  }
+  return createOpenAI({ apiKey: llm.apiKey, baseURL: llm.baseURL }).chat(llm.model);
+}

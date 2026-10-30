@@ -18,8 +18,7 @@ Load a CSV, explore it with SQL, and use AVA to turn questions into analysis and
 Register the engine once, then use AVA as usual:
 
 ```ts
-import { AVA } from '@antv/ava/browser';
-import { registerEngine } from '@antv/ava/engine';
+import { AVA, registerEngine } from '@antv/ava/browser';
 import { DuckDBWasmEngine } from 'ava-duckdb-wasm';
 
 registerEngine('duckdb-wasm', DuckDBWasmEngine);
@@ -38,7 +37,7 @@ try {
 }
 ```
 
-> **Availability:** This package is not yet published to npm. It requires an AVA build that exports `@antv/ava/engine`; the published AVA beta may not include that entry yet.
+> **Availability:** This package is not yet published to npm. It requires an AVA build that exports `registerEngine` from `@antv/ava/browser`; the published AVA beta may not include that export yet.
 
 ## Good to know
 

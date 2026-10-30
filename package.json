@@ -1,6 +1,6 @@
 {
   "name": "ava-duckdb-wasm",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.1",
   "description": "DuckDB-Wasm browser engine for AVA",
   "license": "MIT",
   "repository": "github:yvonneyx/ava-duckdb-wasm",
@@ -25,13 +25,12 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@antv/ava": ">=4.0.0-beta.3 <5"
+    "@antv/ava": ">=4.0.0-beta.4 <5"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.73",
     "@duckdb/duckdb-wasm": "1.33.1-dev57.0",
-    "ai": "^7.0.112",
-    "zod": "^3.25.76"
+    "ai": "^7.0.112"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

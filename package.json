@@ -25,7 +25,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@antv/ava": ">=4.0.0-beta.4 <5"
+    "@antv/ava": "^4.0.0-beta.4"
   },
   "dependencies": {
     "@ai-sdk/openai": "^4.0.73",

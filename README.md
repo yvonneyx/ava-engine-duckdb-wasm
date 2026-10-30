@@ -15,7 +15,13 @@ Load a CSV, explore it with SQL, and use AVA to turn questions into analysis and
 
 ## Get started
 
-Register the engine once, then use AVA as usual:
+Install the latest AVA beta:
+
+```sh
+npm install @antv/ava@beta
+```
+
+This engine package is not yet published to npm. Once it is available, install it alongside AVA, then register the engine once:
 
 ```ts
 import { AVA, registerEngine } from '@antv/ava/browser';
@@ -37,7 +43,7 @@ try {
 }
 ```
 
-> **Availability:** This package is not yet published to npm. It requires an AVA build that exports `registerEngine` from `@antv/ava/browser`; the published AVA beta may not include that export yet.
+> **Compatibility:** Requires AVA `4.0.0-beta.4` or later (below 5.0.0).
 
 ## Good to know
 

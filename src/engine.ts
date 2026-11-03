@@ -118,7 +118,8 @@ export class DuckDBWasmEngine implements AnalysisEngine {
         try {
           const response = await fetch(bundle.mainModule, { signal: download.signal });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          const blob = await response.blob();
+          // Large network-backed Blobs can fail to materialize inside browser workers.
+          const blob = new Blob([await response.arrayBuffer()], { type: 'application/wasm' });
           check();
           moduleURL = URL.createObjectURL(blob);
         } catch (error) {
